@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class GreetingController extends Controller
 {
-    public function result($time )
+    public function greeting($time_zone)
     {
-        // 挨拶                                       //
-        switch ($time) {
+        // ①挨拶                                       //
+        switch ($time_zone) {
         case 'morning':
         $time = '朝';
         $greeting = 'おはようございます';
@@ -29,6 +29,21 @@ class GreetingController extends Controller
         }
 
         return view('greeting' , 
-                    ['time' => $time, 'time_greeting' => $time_greeting]);
+                    ['time' => $time, 'greeting' => $greeting]);
+    }
+
+        // ②フリー                                     //
+        public function free_greeting($free)
+    {
+        return view('free_greeting' ,['free' => $free]);
+    }
+
+       // ③ ランダム                                  //
+        public function random_greeting()
+    {
+        $greets = ['おはよう','こんにちは', 'こんばんは', 'おやすみ'];
+        $key = array_rand($greets, 1);
+        $random_greeting = $greets[$key];
+        return view('random', ['aaa' => $random_greeting]);
     }
 }

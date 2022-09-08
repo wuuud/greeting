@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $time }}のあいさつ</h1><br>
-    <h1>{{ $greeting }}</h1>
+    <h1>ランダムなメッセージ</h1><br>
+    <h1>{{ $aaa }}</h1>
 </body>
 </html>

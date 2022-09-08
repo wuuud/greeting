@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $time }}のあいさつ</h1><br>
-    <h1>{{ $greeting }}</h1>
+    <h1>自由なメッセージ</h1><br>
+    <h2>{{ $free }}</h2>
 </body>
 </html>
